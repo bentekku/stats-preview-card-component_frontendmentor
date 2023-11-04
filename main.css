@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: hsl(233, 47%, 7%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lexend Deca", sans-serif;
+  padding: 32px;
+}
+
+.attribution {
+  position: fixed;
+  bottom: 21px;
+  right: 0;
+  left: 0;
+  color: hsl(0, 0%, 100%);
+  font-size: 13px;
+}
+.attribution a,
+.attribution a:visited {
+  color: hsl(277, 64%, 61%);
+  font-weight: 500;
+}
+
+.card {
+  width: 338px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(244, 38%, 16%);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card .hero__image {
+  width: 100%;
+  height: 200px;
+  background-color: hsl(277, 64%, 61%);
+}
+.card .hero__image .card__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  mix-blend-mode: multiply;
+  opacity: 0.7;
+  background-color: hsl(277, 64%, 61%);
+}
+.card .details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 32px 12px;
+  gap: 16px;
+}
+.card .details .about {
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.card .details .about .details__title {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+}
+.card .details .about .details__title span {
+  color: hsl(277, 64%, 61%);
+}
+.card .details .about p {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-size: 15px;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  max-width: 327px;
+}
+.card .details .stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.card .details .stats .company,
+.card .details .stats .template,
+.card .details .stats .query {
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  gap: 8px;
+}
+.card .details .stats .company .details__title,
+.card .details .stats .template .details__title,
+.card .details .stats .query .details__title {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+}
+.card .details .stats span {
+  color: hsla(0, 0%, 100%, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  font-size: 15px;
+  text-align: center;
+  max-width: 327px;
+}
+
+@media screen and (max-width: 560px) {
+  .attribution {
+    display: none;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .card {
+    width: 60%;
+    height: 50%;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .card .hero__image {
+    width: 50%;
+    height: 100%;
+  }
+  .card .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 32px;
+    max-width: 50%;
+    height: 100%;
+    gap: 16px;
+  }
+  .card .details .about {
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+    max-width: 85%;
+  }
+  .card .details .about .details__title {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    text-align: start;
+    margin-bottom: 8px;
+  }
+  .card .details .about .details__title span {
+    color: hsl(277, 64%, 61%);
+  }
+  .card .details .about p {
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 15px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    text-align: start;
+    max-width: 95%;
+  }
+  .card .details .stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    width: 85%;
+  }
+  .card .details .stats .company,
+  .card .details .stats .template,
+  .card .details .stats .query {
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    gap: 8px;
+  }
+  .card .details .stats .company .details__title,
+  .card .details .stats .template .details__title,
+  .card .details .stats .query .details__title {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+  }
+  .card .details .stats span {
+    color: hsla(0, 0%, 100%, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: center;
+  }
+}/*# sourceMappingURL=main.css.map */

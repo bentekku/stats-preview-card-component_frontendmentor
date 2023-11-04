@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+//// VARIABLES
+/// Colors
+// Primary
+$very-dark-blue-bg: hsl(233, 47%, 7%);
+$dark-desaturated-blue-card-bg: hsl(244, 38%, 16%);
+$soft-violet-accent: hsl(277, 64%, 61%);
+// Neutral
+$white: hsl(0, 0%, 100%); //(main heading, stats)
+$slightly-transparent-white-main-para: hsla(0, 0%, 100%, 0.75);
+$slightly-transparent-white-stat-headings: hsla(0, 0%, 100%, 0.6);
+/// Typography
+$para-size: 15px;
+$primary-font: "Inter", sans-serif;
+$secondary-font: "Lexend Deca", sans-serif;
+
+body {
+  height: 100vh;
+  background-color: $very-dark-blue-bg;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $secondary-font;
+  padding: 32px;
+}
+.attribution {
+  position: fixed;
+  bottom: 21px;
+  right: 0;
+  left: 0;
+  color: $white;
+  font-size: 13px;
+  a,
+  a:visited {
+    color: $soft-violet-accent;
+    font-weight: 500;
+  }
+}
+
+.card {
+  width: 338px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $dark-desaturated-blue-card-bg;
+  border-radius: 10px;
+  overflow: hidden;
+  .hero__image {
+    width: 100%;
+    height: 200px;
+    background-color: $soft-violet-accent;
+    .card__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      mix-blend-mode: multiply;
+      opacity: 0.7;
+      background-color: $soft-violet-accent;
+    }
+  }
+  .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 32px 12px;
+    gap: 16px;
+    .about {
+      color: $white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+
+      .details__title {
+        font-family: $primary-font;
+        font-weight: 700;
+        font-size: 24px;
+        span {
+          color: $soft-violet-accent;
+        }
+      }
+      p {
+        color: $slightly-transparent-white-main-para;
+        font-size: $para-size;
+        line-height: 1.5;
+        letter-spacing: 0.5px;
+        font-weight: 400;
+        max-width: 327px;
+      }
+    }
+    .stats {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      .company,
+      .template,
+      .query {
+        color: $white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        gap: 8px;
+        .details__title {
+          font-family: $primary-font;
+          font-weight: 700;
+          font-size: 24px;
+        }
+      }
+      span {
+        color: $slightly-transparent-white-stat-headings;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-weight: 400;
+        font-size: $para-size;
+        text-align: center;
+        max-width: 327px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .attribution {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .card {
+    width: 60%;
+    height: 50%;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    .hero__image {
+      width: 50%;
+      height: 100%;
+    }
+    .details {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      padding: 32px;
+      max-width: 50%;
+      height: 100%;
+      gap: 16px;
+
+      // outline: 1px solid green;
+
+      .about {
+        color: $white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 16px;
+        max-width: 85%;
+
+        // outline: 1px solid white;
+
+        .details__title {
+          font-family: $primary-font;
+          font-weight: 700;
+          font-size: 32px;
+          text-align: start;
+          margin-bottom: 8px;
+
+          // outline: 1px solid red;
+
+          span {
+            color: $soft-violet-accent;
+          }
+        }
+        p {
+          color: $slightly-transparent-white-main-para;
+          font-size: $para-size;
+          line-height: 1.5;
+          letter-spacing: 0.5px;
+          font-weight: 400;
+          text-align: start;
+          max-width: 95%;
+
+          // outline: 1px solid yellow;
+        }
+      }
+      .stats {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        width: 85%;
+
+        // outline: 1px solid blue;
+
+        .company,
+        .template,
+        .query {
+          color: $white;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-transform: uppercase;
+          gap: 8px;
+          .details__title {
+            font-family: $primary-font;
+            font-weight: 700;
+            font-size: 24px;
+          }
+        }
+        span {
+          color: $slightly-transparent-white-stat-headings;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+          font-weight: 400;
+          font-size: $para-size;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
